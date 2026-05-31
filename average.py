@@ -6,10 +6,8 @@ def calculate_average_word_length(str):
     if not words:
         return 0
     
-    #calculate the total length of all words
     total_length = sum(len(word) for word in words)
     
-    #calculate the average word length
     average_length = total_length / len(words) if words else 0
     
     return average_length
