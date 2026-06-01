@@ -5,14 +5,9 @@ def count_specific_word(str1, str2):
     str1 = input("Enter the news article: ")
     str2 = input("Enter the word to count: ")
 
-    # Split the article into words
-    words = str1.split()
-
-    if not words:
-        return 0
-    
-    # Count the occurrences of the specified word
-    count = words.count(str2)
+    for word in str1.split():
+        if word == str2:
+            count += 1
 
     return count
 
@@ -70,6 +65,9 @@ print(calculate_average_word_length(f"The average word length is: {calculate_ave
 def count_paragraphs(str):
     #input
     str = input("Enter the news article: ")
+
+    if str.strip() == "":
+        return 1
 
     # Split the string into paragraphs based on newline characters
     paragraphs = str.split('\n\n')
