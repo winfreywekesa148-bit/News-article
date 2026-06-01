@@ -52,7 +52,7 @@ def calculate_average_word_length(str):
     #split the string into words
     words = str.split()
 
-    if not words:
+    if len(words) == 0:
         return 0
     
     #calculate the total length of all words
