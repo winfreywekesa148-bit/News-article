@@ -7,6 +7,9 @@ def count_specific_word(str1, str2):
 
     # Split the article into words
     words = str1.split()
+
+    if not words:
+        return 0
     
     # Count the occurrences of the specified word
     count = words.count(str2)
