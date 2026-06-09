@@ -33,8 +33,6 @@ def identify_most_common_word(str):
     
     return most_common_word, count
 
-print(identify_most_common_word(""))
-
 
 #calculate the average of word length
 def calculate_average_word_length(str):
@@ -52,8 +50,6 @@ def calculate_average_word_length(str):
     
     return average_length
 
-print(calculate_average_word_length(f"The average word length is: {calculate_average_word_length('')}"))
-
 
 # count number paragraphs 
 def count_paragraphs(str):
@@ -69,8 +65,6 @@ def count_paragraphs(str):
     
     return num_paragraphs
 
-print(count_paragraphs(""))
-
 
 #count number of sentences 
 def count_sentences(str):
@@ -82,6 +76,4 @@ def count_sentences(str):
     num_sentences = len(sentences)
     
     return num_sentences
-
-print(count_sentences("")) 
 
