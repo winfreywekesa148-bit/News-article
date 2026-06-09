@@ -38,10 +38,7 @@ print(identify_most_common_word(""))
 
 #calculate the average of word length
 def calculate_average_word_length(str):
-    #Input
-    str = input("Enter the news article: ")
-
-    #split the string into words
+       #split the string into words
     words = str.split()
 
     if len(words) == 0:
@@ -60,9 +57,7 @@ print(calculate_average_word_length(f"The average word length is: {calculate_ave
 
 # count number paragraphs 
 def count_paragraphs(str):
-    #input
-    str = input("Enter the news article: ")
-
+    
     if str.strip() == "":
         return 1
 
@@ -79,9 +74,7 @@ print(count_paragraphs(""))
 
 #count number of sentences 
 def count_sentences(str):
-    #input
-    str = input("Enter the news article: ")
-
+    
     # Split the string into sentences based on punctuation marks
     sentences = str.split('.')
     
