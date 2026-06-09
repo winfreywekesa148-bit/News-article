@@ -10,9 +10,6 @@ def count_specific_word(str1, str2):
             count += 1
 
     return count
-
-print(count_specific_word("", "")) 
-
     
 #identify the most common word
 def identify_most_common_word(str):
