@@ -44,6 +44,7 @@ def calculate_average_word_length(str):
     
     #calculate the total length of all words
     total_length = sum(len(word) for word in words)
+    word = word.strip('.,!?";:()')
     
     #calculate the average word length
     average_length = total_length / len(words) if words else 0
