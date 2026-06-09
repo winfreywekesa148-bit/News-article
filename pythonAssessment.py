@@ -1,11 +1,11 @@
 # counts the number of times a specified word appears in a news article
 def count_specific_word(str1, str2):
-
-    #Input
-    str1 = input("Enter the news article: ")
-    str2 = input("Enter the word to count: ")
+    count = 0
 
     for word in str1.split():
+        
+        word = word.strip('.,!?";()')
+        
         if word == str2:
             count += 1
 
