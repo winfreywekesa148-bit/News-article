@@ -40,7 +40,7 @@ def calculate_average_word_length(str):
         return 0
     
     #calculate the total length of all words
-    total_length = sum(len(word) for word in words)
+    total_length = sum(len(word.strip('.,!?";()')) for word in words)
     
     #calculate the average word length
     average_length = total_length / len(words) if words else 0
@@ -63,11 +63,12 @@ def count_paragraphs(str):
 
 #count number of sentences 
 def count_sentences(str):
+    if str == "":
+        return 1
+
+    count = 0
+    for s in str:
+        if s in ".!?":
+            count += 1
     
-    # Split the string into sentences based on punctuation marks
-    sentences = str.split('.')
-    
-    # Count the number of sentences
-    num_sentences = len(sentences)
-    
-    return num_sentences
+    return count
