@@ -3,13 +3,18 @@ def count_specific_word(str1, str2):
     count = 0
 
     for word in str1.split():
-        
-        word = word.strip('.,!?";()')
-        
+
+        word = word.strip('.,!?";()')  # Remove punctuation from the word
+
         if word == str2:
             count += 1
 
     return count
+
+print(count_specific_word("This is a test. This is only a test.", "test"))
+print(count_specific_word("apple apple banana banana banana", "banana"))
+print(count_specific_word("", "test"))
+
     
 #identify the most common word
 def identify_most_common_word(str):
@@ -33,22 +38,27 @@ def identify_most_common_word(str):
     
     return most_common_word, count
 
+print(identify_most_common_word(""))
+
 
 #calculate the average of word length
 def calculate_average_word_length(str):
-       #split the string into words
+
+    #split the string into words
     words = str.split()
 
     if len(words) == 0:
         return 0
     
     #calculate the total length of all words
-     total_length = sum(len(word) for word in words)
+    total_length = sum(len(word) for word in words)
     
     #calculate the average word length
     average_length = total_length / len(words) if words else 0
     
     return average_length
+
+print(calculate_average_word_length(f"The average word length is: {calculate_average_word_length('')}"))
 
 
 # count number paragraphs 
@@ -65,6 +75,8 @@ def count_paragraphs(str):
     
     return num_paragraphs
 
+print(count_paragraphs(""))
+
 
 #count number of sentences 
 def count_sentences(str):
@@ -76,4 +88,6 @@ def count_sentences(str):
     num_sentences = len(sentences)
     
     return num_sentences
+
+print(count_sentences("")) 
 
