@@ -11,16 +11,8 @@ def count_specific_word(str1, str2):
 
     return count
 
-print(count_specific_word("This is a test. This is only a test.", "test"))
-print(count_specific_word("apple apple banana banana banana", "banana"))
-print(count_specific_word("", "test"))
-
-    
 #identify the most common word
 def identify_most_common_word(str):
-
-    #Input
-    str = input("Enter the news article: ")
 
     #split the string into words
     words = str.split()
@@ -37,9 +29,6 @@ def identify_most_common_word(str):
     count = word_count[most_common_word]
     
     return most_common_word, count
-
-print(identify_most_common_word(""))
-
 
 #calculate the average of word length
 def calculate_average_word_length(str):
@@ -58,9 +47,6 @@ def calculate_average_word_length(str):
     
     return average_length
 
-print(calculate_average_word_length(f"The average word length is: {calculate_average_word_length('')}"))
-
-
 # count number paragraphs 
 def count_paragraphs(str):
     
@@ -75,9 +61,6 @@ def count_paragraphs(str):
     
     return num_paragraphs
 
-print(count_paragraphs(""))
-
-
 #count number of sentences 
 def count_sentences(str):
     
@@ -88,6 +71,3 @@ def count_sentences(str):
     num_sentences = len(sentences)
     
     return num_sentences
-
-print(count_sentences("")) 
-
